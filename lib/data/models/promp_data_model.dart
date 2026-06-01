@@ -14,8 +14,8 @@ class PrompDataModel extends PromptDataEntity {
       role: json["role"],
       task: json["task"],
       context: json["context"],
-      constraints: json["constraints"],
-      questionsForAi: json["questions_for_ai"],
+      constraints: List<String>.from(json["constraints"] ?? []),
+      questionsForAi: json["questions_for_ai"] as bool? ?? false,
     );
   }
 

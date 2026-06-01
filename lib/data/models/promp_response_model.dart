@@ -1,4 +1,4 @@
-import 'package:generate_promps/domain/entities/prompt_response.dart';
+import 'package:generate_promps/domain/entities/promp_response.dart';
 
 // esta clase se crea por que la respuesta que nos manda la api 
 //despues de darle las tareas etc la api nos debuelve un json(modelo) diferente
