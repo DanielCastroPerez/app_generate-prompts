@@ -6,10 +6,10 @@ import 'package:generate_promps/domain/entities/generate_promp.dart';
 import 'package:generate_promps/domain/entities/promp_response.dart';
 import 'package:generate_promps/domain/repositories/promp_repositories.dart';
 
-class PrompRepositoryImpl implements PrompRepository {
+class PromptRepositoryImpl implements PrompRepository {
   final PrompRemoteDatasource remoteDatasource;
 
-  PrompRepositoryImpl({
+  PromptRepositoryImpl({
     required this.remoteDatasource,
   });
   
