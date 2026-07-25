@@ -52,7 +52,9 @@ class _ConstraintsChipsInputState extends State<ConstraintsChipsInput> {
           controller: _controller,
           decoration: InputDecoration(
             labelText: "Add constraint...",
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
             suffixIcon: IconButton(
               icon: const Icon(Icons.add_circle, color: Colors.deepPurple),
               onPressed: _addConstraint,
@@ -68,7 +70,9 @@ class _ConstraintsChipsInputState extends State<ConstraintsChipsInput> {
             return Chip(
               label: Text(constraint),
               onDeleted: () {
-                final updatedList = widget.constraints.where((c) => c != constraint).toList();
+                final updatedList = widget.constraints
+                    .where((c) => c != constraint)
+                    .toList();
                 widget.onConstraintsChanged(updatedList);
               },
             );

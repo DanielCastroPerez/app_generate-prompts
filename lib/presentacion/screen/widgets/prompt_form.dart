@@ -126,6 +126,31 @@ class _PromptFormState extends State<PromptForm> {
             ),
 
             SizedBox(height: 30.0),
+                    SizedBox(
+          width: double.infinity,
+          height: 50,
+          child: ElevatedButton.icon(
+            icon: Icon(Icons.bolt),
+            label: const Text(
+              "Optimizar Prompt",
+              style: TextStyle(fontSize: 16),
+            ),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.deepPurple,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            onPressed: () {
+              final model = _selectedModel  ?? 'gemini-2.5-flash';
+              final temp = _currentTemperature;
+              final roleText = _roleController;
+              final taslText = _taskController;
+              final contextText = _contextController;
+            },
+          ),
+        ),
           ],
         ),
       ),
